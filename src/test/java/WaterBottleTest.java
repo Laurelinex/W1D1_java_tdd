@@ -8,11 +8,12 @@ public class WaterBottleTest {
 
     @Before
     public void before() {
-        waterBottle = new WaterBottle(6.5);
+        waterBottle = new WaterBottle();
     }
 
     @Test
-    public void hasVolume() {
-        assertEquals(6.5, waterBottle.getVolume(), 0.0);
+    public void hasVolume100() {
+        assertEquals(100, waterBottle.getVolume(), 0.0);
     }
+
 }
