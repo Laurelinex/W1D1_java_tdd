@@ -16,8 +16,10 @@ public class Printer {
     }
 
     public int print(int pages, int copies) {
-        if(this.sheetsOfPaper >= (pages * copies)) {
-            return this.sheetsOfPaper - (pages * copies);
+        int numberOfPagesToBePrinted = (pages * copies);
+        if(this.sheetsOfPaper >= numberOfPagesToBePrinted) {
+            setTonerVolume(this.tonerVolume - numberOfPagesToBePrinted);
+            return this.sheetsOfPaper - numberOfPagesToBePrinted;
         }
         return this.sheetsOfPaper;
     }

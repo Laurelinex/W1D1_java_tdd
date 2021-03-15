@@ -33,4 +33,10 @@ public class PrinterTest {
         assertEquals(200, printer.getTonerVolume());
     }
 
+    @Test
+    public void tonerReducesBy1ForEachPagePrinted() {
+        printer.print(2, 5);
+        assertEquals(190, printer.getTonerVolume());
+    }
+
 }
