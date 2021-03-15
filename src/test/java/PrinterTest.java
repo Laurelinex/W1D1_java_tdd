@@ -18,8 +18,14 @@ public class PrinterTest {
     }
 
     @Test
-    public void canPrint() {
+    public void canPrintIfEnoughPaper() {
         assertEquals(80, printer.print(2, 10));
+    }
+
+    @Test
+    public void cannotPrintIfNotEnoughPaper() {
+        Printer fewSheetsLeftPrinter = new Printer(5);
+        assertEquals(5, fewSheetsLeftPrinter.print(2, 10));
     }
 
 }

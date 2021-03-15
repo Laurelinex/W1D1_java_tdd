@@ -14,6 +14,9 @@ public class Printer {
     }
 
     public int print(int pages, int copies) {
-        return this.sheetsOfPaper - (pages * copies);
+        if(this.sheetsOfPaper >= (pages * copies)) {
+            return this.sheetsOfPaper - (pages * copies);
+        }
+        return this.sheetsOfPaper;
     }
 }
