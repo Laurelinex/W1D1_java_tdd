@@ -12,4 +12,8 @@ public class WaterBottle {
     public void setVolume(double volume) {
         this.volume = volume;
     }
+
+    public double drink() {
+        return this.volume - 10;
+    }
 }
