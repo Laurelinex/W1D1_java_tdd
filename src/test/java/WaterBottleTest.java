@@ -21,4 +21,9 @@ public class WaterBottleTest {
         assertEquals(90, waterBottle.drink(), 0.0);
     }
 
+    @Test
+    public void emptySetsTo0() {
+        assertEquals(0, waterBottle.empty(), 0.0);
+    }
+
 }
