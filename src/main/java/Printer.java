@@ -12,4 +12,8 @@ public class Printer {
     public void setSheetsOfPaper(int sheetsOfPaper) {
         this.sheetsOfPaper = sheetsOfPaper;
     }
+
+    public int print(int pages, int copies) {
+        return this.sheetsOfPaper - (pages * copies);
+    }
 }

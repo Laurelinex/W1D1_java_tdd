@@ -17,4 +17,9 @@ public class PrinterTest {
         assertEquals(100, printer.getSheetsOfPaper());
     }
 
+    @Test
+    public void canPrint() {
+        assertEquals(80, printer.print(2, 10));
+    }
+
 }
