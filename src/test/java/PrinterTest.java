@@ -18,7 +18,7 @@ public class PrinterTest {
     }
 
     @Test
-    public void canPrintIfEnoughPaper() {
+    public void canPrintIfEnoughPaperAndToner() {
         assertEquals(80, printer.print(2, 10));
     }
 
@@ -37,6 +37,12 @@ public class PrinterTest {
     public void tonerReducesBy1ForEachPagePrinted() {
         printer.print(2, 5);
         assertEquals(190, printer.getTonerVolume());
+    }
+
+    @Test
+    public void cannotPrintIfEnoughPaperButNotEnoughToner() {
+        Printer littleTonerLeftPrinter = new Printer(100, 5);
+        assertEquals(100, littleTonerLeftPrinter.print(2, 5));
     }
 
 }
